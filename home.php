@@ -53,7 +53,7 @@
 			</div>
 		</div>
    </section>
-   <section>
+<!--    <section>
    		<div class="container">
    			<div class="row">
    				<div class="col-md-8 col-md-offset-2 text-center">
@@ -76,7 +76,7 @@
    								</div>
    						    </div>
    							<div class="col-md-4">
-   								<div class="get-free-demo">
+   								<div class="free-demo">
    									<p>Get A Free </p>
    									<h3>Demo</h3>
    								</div>
@@ -92,7 +92,7 @@
    				</div>
    			</div>
    		</div>
-   	</section>
+   	</section -->
 
    <div class="home-tutor">
    	<div class="home-tutor-content">
@@ -112,7 +112,7 @@
    <?php  include_once 'inc/enquiry-form.php'; ?>
 	
 
-<!-- <section>
+<section>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="container ">
@@ -216,7 +216,7 @@
 			</div>
 		</div>
 	</div>
-</section> -->	
+</section>	
 <?php include "footer.php" ?>
    	
 	

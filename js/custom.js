@@ -94,6 +94,8 @@ $(document).ready(function($)
 			}
 
 		});
+		var url = $('#url_hidden').value();
+		
 
 
 

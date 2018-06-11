@@ -1260,8 +1260,21 @@ border-color: #2196F3;
   background: transparent url(images/down-arrow.png) no-repeat 100% 70%;
 
 }
-.selectpicker option{
+.selectpicker option
+{
   font-size: 20px;
   font-family: arimo-regular;
 }
 
+.tell-us-need
+{
+  border:5px solid black;
+}
+.free-demo
+{
+  border:5px solid black;
+}
+.confirm-if-like
+{
+   border:5px solid black;
+}
