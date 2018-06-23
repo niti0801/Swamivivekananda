@@ -53,7 +53,7 @@
 			</div>
 		</div>
    </section>
-<!--    <section>
+   <section class="how-it-works">
    		<div class="container">
    			<div class="row">
    				<div class="col-md-8 col-md-offset-2 text-center">
@@ -66,25 +66,128 @@
    				</div>
    			</div>
    			<div class="row">
-   				<div class="col-md-12 text-center">
+   				<div class="col-md-8 col-md-offset-2 text-center">
    					<div id="student">
    						<div class="row">
    							<div class="col-md-4">
    								<div class="tell-us-need">
-   								 	<p>Tell Us Your</p>
-   								 	<h3>NEEDS</h3>	
+   									<div class="content">
+   								 		<p>Tell Us Your</p>
+   								 		<h3>NEEDS</h3>
+   								 		<img src="images/one.png">
+   								 	</div>	
    								</div>
+   								
    						    </div>
    							<div class="col-md-4">
    								<div class="free-demo">
-   									<p>Get A Free </p>
-   									<h3>Demo</h3>
+   									<div class="content">
+   										<p>Get A Free </p>
+   										<h3>Demo</h3>
+   										<img src="images/two.png">
+   									</div>
+   									
    								</div>
    							</div>
    							<div class="col-md-4">
    								<div class="confirm-if-like">
-   									<p>Confirm If You</p>
-   									<h3>Like</h3>
+   									<div class="content">
+   										<p>Confirm If You</p>
+   										<h3>Like</h3>
+   										<img src="images/three.png">
+   									</div>
+
+   								</div>
+   							</div>     							
+   						</div>
+   						<div class="row">
+   							<div class="col-md-6 col-md-offset-3">
+   								<div class="button-content">
+   									<a href="register.php" class="how-it-works-button">Post tution needs for free</a>
+   								</div>
+   							</div>
+   						</div>
+   					</div>
+   					<div id="faculty">
+   						<div class="row">
+   							<div class="col-md-4">
+   								<div class="tell-us-need">
+   									<div class="content">
+   								 		<p>Create</p>
+   								 		<h3>Profile</h3>
+   								 		<img src="images/one.png">
+   								 	</div>	
+   								</div>
+   								
+   						    </div>
+   							<div class="col-md-4">
+   								<div class="free-demo">
+   									<div class="content">
+   										<p>Get </p>
+   										<h3>Students</h3>
+   										<img src="images/two.png">
+   									</div>
+   									
+   								</div>
+   							</div>
+   							<div class="col-md-4">
+   								<div class="confirm-if-like">
+   									<div class="content">
+   										<p>Start</p>
+   										<h3>Earning</h3>
+   										<img src="images/three.png">
+   									</div>
+
+   								</div>
+   							</div>     							
+   						</div>
+   						<div class="row">
+   							<div class="col-md-6 col-md-offset-3">
+   								<div class="button-content">
+   									<a href="register.php" class="how-it-works-button">Join as a tutor for free</a>
+   								</div>
+   							</div>
+   						</div>
+   					</div>
+   					<div id="institute">
+   						<div class="row">
+   							<div class="col-md-4">
+   								<div class="tell-us-need">
+   									<div class="content">
+   								 		<p>Create </p>
+   								 		<h3>Profile</h3>
+   								 		<img src="images/one.png">
+   								 	</div>	
+   								</div>
+   								
+   						    </div>
+   							
+   							<div class="col-md-4">
+   								<div class="confirm-if-like">
+   									<div class="content">
+   										<p>Tell Us Your Free</p>
+   										<h3>Time</h3>
+   										<img src="images/two.png">
+   									</div>
+
+   								</div>
+   							</div> 
+
+                        <div class="col-md-4">
+                           <div class="confirm-if-like">
+                              <div class="content">
+                                 <p>Get Student &</p>
+                                 <h3>Faculty</h3>
+                                 <img src="images/three.png">
+                              </div>
+
+                           </div>
+                        </div>    							
+   						</div>
+   						<div class="row">
+   							<div class="col-md-6 col-md-offset-3">
+   								<div class="button-content">
+   									<a href="register.php" class="how-it-works-button">Join for free</a>
    								</div>
    							</div>
    						</div>
@@ -92,7 +195,7 @@
    				</div>
    			</div>
    		</div>
-   	</section -->
+   	</section>
 
    <div class="home-tutor">
    	<div class="home-tutor-content">
@@ -101,122 +204,15 @@
    				<img src="images/need-home-tutor.png" class="img-responsive">
    			</a>
    			<div class="home-tutor-close">
-   			<i class="fa fa-times"></i>
-   			
+   				<i class="fa fa-times"></i>
+   			</div>
    		</div>
-   		</div>
-
    	</div>
-   	
    </div>
    <?php  include_once 'inc/enquiry-form.php'; ?>
 	
 
-<section>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="container ">
-				<div class="row home-works">
-					<div class="col-md-12">
-						<div class="home-main-heading">
-							
-							<h3>How It Works</h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<h3>Students/Parents</h3>
-					<hr>
-					<div class="how-works-block">
-						<div class="how-work-image">
-							<img src="" class="responsive">
-						</div>
-						<div class="how-works-contant">
-							<p>
-								<em>
-									<b>Tell Us Your Tuition Needs:</b>
-									Just fill few details about your home tuition needs
-								</em>
-							</p>
-						</div>
-					</div>
-					<div class="how-works-block">
-						<div class="how-work-image">
-							<img src="" class="responsive">
-						</div>
-						<div class="how-works-contant">
-							<p>
-								<em>
-									<b>Get Free Demo:</b>
-									Interested home tutors will apply for your home tuition and we will arrange a free demo class by our home tutor.
-								</em>
-							</p>
-						</div>
-					</div>
-					<div class="how-works-block">
-						<div class="how-work-image">
-							<img src="" class="responsive">
-						</div>
-						<div class="how-works-contant">
-							<p>
-								<em>
-									<b>Confirm If You Like:</b>
-									After the demo class, evaluate the teacher and if you are satisfied with tutors teaching abilities then confirm him.
-								</em>
-							</p>
-						</div>
-					</div>
-				</div>
-  			<div class="col-md-6">
-  				<h3>Tutors/Institute</h3>
-  				<hr>
-  				<div class="how-works-block">
-  					<div class="how-work-image">
-  						<img src="" class="responsive">
-  					</div>
-  					<div class="how-works-contant">
-  						<p>
-  							<em>
-  								<b>Create Profile:</b>
-  								Advertise about yourself by creating your profile.
-  							</em>
-  						</p>
-  					</div>
-  				</div>
-  				<div class="how-works-block">
-  					<div class="how-work-image">
-  						<img src="" class="responsive">
-  					</div>
-  					<div class="how-works-contant">
-  						<p>
-  							<em>
-  								<b>Get Students:</b>
-  								You can find students by searching tuition needs posted on our website which matches your profile. Apply tuitions relevant to you.
-  							</em>
-  						</p>
-  					</div>
-  				</div>
-  				<div class="how-works-block">
-  					<div class="how-work-image">
-  						<img src="" class="responsive">
-  					</div>
-  					<div class="how-works-contant">
-  						<p>
-  							<em>
-  								<b>Start Earning: </b>
-  								Students/Parents who posted the tuition needs you applied will request a demo class. Give your best in the demo class to get the tuition confirmed.
-  							</em>
-  						</p>
-  					</div>
-  				</div>
 
-  				
-  			</div>
-
-			</div>
-		</div>
-	</div>
-</section>	
 <?php include "footer.php" ?>
    	
 	
