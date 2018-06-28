@@ -123,62 +123,7 @@ $(document).ready(function($)
 
 		});
 		// $('[data-toggle="tooltip"]').tooltip('show');   
-		// $('#form-register').validate({
-		//         framework: 'bootstrap',
-		//         icon: {
-		//             valid: 'glyphicon glyphicon-ok',
-		//             invalid: 'glyphicon glyphicon-remove',
-		//             validating: 'glyphicon glyphicon-refresh'
-		//         },
-		//          err: {
-		//             // You can set it to popover
-		//             // The message then will be shown in Bootstrap popover
-		//             container: 'tooltip'
-		//         },
-		//         fields: {
-  //                   fname: {
-  //                       row: '.column',
-  //                       validators: {
-  //                           notEmpty: {
-  //                               message: 'The first name is required'
-  //                           }
-  //                       }
-  //                   },
-                    
-  //                   email: {
-  //                       validators: {
-  //                           notEmpty: {
-  //                               message: 'The email address is required'
-  //                           },
-  //                            regexp: {
-		//                         regexp: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-		//                         message: 'The input is not a valid email address'
-		//                     },
-  //                           emailAddress: {
-  //                               message: 'The input is not a valid email address'
-  //                           }
-  //                       }
-  //                   },
-  //                   pass1: {
-  //                       validators: {
-  //                           notEmpty: {
-  //                               message: 'The password is required'
-  //                           },
-  //                             stringLength: {
-		//                         min: 8,
-		//                         max: 16,
-		//                         message: 'The password must be more than 8 and less than 16 characters long'
-		//                     },
-		//                     regexp: {
-
-		//                         regexp: /^[a-zA-Z0-9_]+$/,
-		//                         message: 'The password can only consist of alphabetical, number and underscore'
-		//                     },
-                           
-  //                       }
-  //                   },
-  //               }
-  //           });
+		
 
 		// choosing photo for profile photo submission
 		$("#choose-file").click(function()
@@ -220,18 +165,25 @@ $(document).ready(function($)
 		
 		$(function()
     {
-      var availabelLocality=[
-      "Kalyannagar","Hennur Cross","Kasturinagar","Ramamurtynagar","RT Nagar","JP Nagar"
-      
-      ];
-      
+            
       $( "#locality" ).autocomplete(
       {
-		source: availabelLocality
+      	minLength: 3,
+      	classes: {
+          "ui-autocomplete": "highlight"
+        },
+       autoFocus: true,
+		source: 'js/location.json'
       });
             
 
     });
+	$('.ui-menu li div').on( 'click',function() {
+		    // $.getJSON("demo_ajax_json.js",
+		    // });
+		    console.log(1);
+
+		});
 
 
 		$(".previous").click(function(e)
@@ -266,6 +218,161 @@ $(document).ready(function($)
 			}
 			
 		})
+		
+		$(".get_start_btn").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").show();
+			$(".next-modal").show();
+		});
+		// $(".get_start_btn").click(function()
+		// {
+		// 	$(".get_info_intro").hide();
+		// 	$(".get_start_btn").hide();
+		// 	$(".get_info_tutor").show();
+		// 	$(".next-modal").show();
+		// });
+
+
+		$(".next-modal").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").show();
+			$(".next-modal1").show();
+		});
+		$(".next-modal1").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").show();
+			$(".next-modal2").show();
+		});
+		$(".next-modal2").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").hide();
+			$(".next-modal2").hide();
+			$(".get_info_student_4").show();
+			$(".next-modal3").show();
+		});
+		$(".next-modal3").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").hide();
+			$(".next-modal2").hide();
+			$(".get_info_student_4").hide();
+			$(".next-modal3").hide();
+			$(".get_info_student_5").show();
+			$(".next-modal4").show();
+		});
+		$(".next-modal4").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").hide();
+			$(".next-modal2").hide();
+			$(".get_info_student_4").hide();
+			$(".next-modal3").hide();
+			$(".get_info_student_5").hide();
+			$(".next-modal4").hide();
+			$(".get_info_student_6").show();
+			$(".next-modal5").show();
+
+		});
+		$(".next-modal5").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").hide();
+			$(".next-modal2").hide();
+			$(".get_info_student_4").hide();
+			$(".next-modal3").hide();
+			$(".get_info_student_5").hide();
+			$(".next-modal4").hide();
+			$(".get_info_student_6").hide();
+			$(".next-modal5").hide();
+			$(".get_info_student_7").show();
+			$(".next-modal6").show();
+
+
+		});
+
+$(".next-modal6").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").hide();
+			$(".next-modal2").hide();
+			$(".get_info_student_4").hide();
+			$(".next-modal3").hide();
+			$(".get_info_student_5").hide();
+			$(".next-modal4").hide();
+			$(".get_info_student_6").hide();
+			$(".next-modal5").hide();
+			$(".get_info_student_7").hide();
+			$(".next-modal6").hide();
+			$(".get_info_student_8").show();
+			$(".next-modal7").show();
+
+
+		});
+$(".next-modal7").click(function()
+		{
+			$(".get_info_intro").hide();
+			$(".get_start_btn").hide();
+			$(".get_info_student_1").hide();
+			$(".next-modal").hide();
+			$(".get_info_student_2").hide();
+			$(".next-modal1").hide();
+			$(".get_info_student_3").hide();
+			$(".next-modal2").hide();
+			$(".get_info_student_4").hide();
+			$(".next-modal3").hide();
+			$(".get_info_student_5").hide();
+			$(".next-modal4").hide();
+			$(".get_info_student_6").hide();
+			$(".next-modal5").hide();
+			$(".get_info_student_7").hide();
+			$(".next-modal6").hide();
+			$(".get_info_student_8").hide();
+			$(".next-modal7").hide();
+			$(".get_info_student_9").show();
+			$(".next-modal8").show();
+		});
+			
+
+
+
 
 		$('.form-name').on('keypress', function(key) 
 		{
@@ -278,14 +385,48 @@ $(document).ready(function($)
 			return false;
 		}
     });
-		$(".form-phoneno").keypress(function (e) {
-     //if the letter is not digit then display error and don't type anything
-     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-        //display error message
-        $("#errmsg").html("Digits Only").show().fadeOut("3000");
-               return false;
-    }
-   });
+		
+
+
+
+
+
+		var questionNum = 0;													// keep count of question, used for IF condition.
+		var question = '<h1>what is your name?</h1>';				  // first question
+
+		var output = document.getElementById('output');				// store id="output" in output variable
+		output.innerHTML = question;													// ouput first question
+
+		function bot() { 
+		    var input = document.getElementById("input").value;
+		    console.log(input);
+
+		    if (questionNum == 0) {
+		    output.innerHTML = '<h1>hello ' + input + '</h1>';// output response
+		    document.getElementById("input").value = "";   		// clear text box
+		    question = '<h1>how old are you?</h1>';			    	// load next question		
+		    setTimeout(timedQuestion, 2000);									// output next question after 2sec delay
+		    }
+
+		    else if (questionNum == 1) {
+		    output.innerHTML = '<h1>That means you were born in ' + (2016 - input) + '</h1>';
+		    document.getElementById("input").value = "";   
+		    question = '<h1>where are you from?</h1>';					      	
+		    setTimeout(timedQuestion, 2000);
+		    }   
+		}
+
+		function timedQuestion() {
+		    output.innerHTML = question;
+		}
+
+		//push enter key (using jquery), to run bot function.
+		$(document).keypress(function(e) {
+		  if (e.which == 13) {
+		    bot();																						// run bot function when enter key pressed
+		    questionNum++;																		// increase questionNum count by 1
+		  }
+		});
 
 		
 		

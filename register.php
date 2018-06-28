@@ -232,9 +232,9 @@ function test_input($data)
                                                  <div class="column">
                                                     <i class=" fa fa-phone"></i>
                                                     <input type="tel" class="form-control form-phoneno" name="phone" placeholder="Phone number..">
-                                                    
+
                                                 </div>
-                                                <span id="errmsg"></span>
+                                                
                                                 <span class="error"> <?php echo $phone_error ?></span>   
                                             </div>
                                             <div class="register-submit form-group">

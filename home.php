@@ -19,12 +19,11 @@
 			<div class="row">
 				<div class="col-md-12 find text-center">
 
-					<form>
+					
 						<!-- <div class="logo"><img src="Near coach.jpg" class="img-fluid img-responsive" ></div> -->
                     	<label for="categories">Choose<br>
 							<select class="categories" name="categories" id="categories">
-								<option value="0">Categories</option>
-								<option value="student">Student</option>
+								<option value="student" selected="selected">Student</option>
 								<option value="teacher">Faculty</option>
 								<option value="institute">Institute</option>
 							</select>
@@ -41,9 +40,10 @@
 						  		<option value="time">S.std</option>
 						  		<option value="time">C lang</option>
 							</select>
-						</label>	
-   						<input type="submit" name="submit" value="Search">
-					</form>
+						</label>
+                        <button data-target="#get_info"  data-toggle="modal" class="btn_get_info">Search</button>	
+   						<!-- <input type="submit" name="submit" value="Search"> -->
+					
 			   </div>
 			</div>
 			<div class="row">
@@ -61,7 +61,7 @@
 	   				<select class="selectpicker">
 	   			  		<option value="1">Home Tutor</option>
 	   			  		<option value="2">Tution Jobs</option>
-	   			  		<option value="3">Faculties</option>
+	   			  		<option value="3">Institute</option>
 	   				</select>
    				</div>
    			</div>
@@ -209,8 +209,8 @@
    		</div>
    	</div>
    </div>
-   <?php  include_once 'inc/enquiry-form.php'; ?>
-	
+   <?php  //include_once 'inc/enquiry-form.php'; ?>
+   <?php include_once "inc/get_information.php" ?>	
 
 
 <?php include "footer.php" ?>
