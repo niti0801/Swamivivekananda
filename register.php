@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
             {
                 $email_error = "Invalid email format"; 
-            }
+            } 
         }
         if(empty($phone))
         {
@@ -100,16 +100,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         }
     }
     if( empty($error) && (empty($first_name_error) || empty($institute_error)) && empty($email_error)&& empty($password_error) && empty($confrmpass_error) && empty($phone_error) && empty($categories_error)){
+       
         
         include_once('connection.php');
-
+         
+       
 
 
         $sql="SELECT email from `test` where email='$email'";
-        
+
+
+         
         $result=mysqli_query($conn,$sql);
 
-       
+        
+        
         if(mysqli_num_rows($result)>0)
         {
             $error_message="Email id already exists.";
@@ -121,10 +126,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
               
               $sql="INSERT INTO test (name,password,contact_no,email,salt,categories)
               values('$fname','$md5','$phone','$email','$salt','$categories')";
-               print_r($sql);
-               exit;
+              
+              
+              
               if(mysqli_query($conn,$sql))
               {
+                 
                
                 $success_message="Account created succesfully";
                 $fname="";
@@ -135,6 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
               else
               {
                 $error_message="Error: ".mysqli_error($conn);
+                 
               }
 
               mysqli_close($conn);
@@ -161,86 +169,81 @@ function test_input($data)
 
     <div class="register-page-body"></div>
     <div class="spacer"></div>
-
-        <div class="container">
-             <div class="row">
-                 <div class="success"><?php echo $success_message ?></div>
-                  <div class="error"><?php echo $error_message ?></div>
-                  <div><span class="error"> <?php echo  $categories_error?></span> </div>
-                  <div class="col-md-8 col-md-offset-2">
+    <div class="container">
+        <div class="row">
+           
+                <div><span class="error"> <?php echo  $categories_error?></span></div>
+                <div class="col-md-8 col-md-offset-2">
                     <div class="register-layout">
+                        <div class="success-msz"><?php echo $success_message ?></div>
+                        <div class="error-msz"><?php echo $error_message ?></div>
+                        <div class="error-msz"><?php echo $error ?></div>
                         <div class="register-content-opacity">
-                           <h1 class="text-center register-heading">Sign Up For Free</h1>
+                            <h1 class="text-center register-heading">Sign Up For Free</h1>
                             <div class="">
                                 <div class="row">
-                                     <div class="col-md-12">
-                                         <div class="inner-body">
-                                           <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>"  method="POST" id="form-register"> 
-                                            
-
-                                             
-                                            <label class="register-label ">
-                                                <input type="radio" name="signup_form_select" value="1" id="register_select_student" checked>
-                                                
-                                                 Student  
-                                            </label>
+                                    <div class="col-md-12">
+                                        <div class="inner-body">
+                                            <form action=" "  method="POST" id="form-register"> 
+                                                <label class="register-label ">
+                                                    <input type="radio" name="signup_form_select" value="1" id="register_select_student" checked> Student  
+                                                </label>
                                                   
-                                            <label class="register-label">
-                                                <input type="radio" name="signup_form_select" id="register_select_faculty" value="2">
-                                                
-                                                 Faculty
-                                            </label>
+                                                <label class="register-label">
+                                                    <input type="radio" name="signup_form_select" id="register_select_faculty" value="2">
+                                                    Faculty
+                                                </label>
                                                   
-                                            <label class="register-label">
-                                                <input type="radio" name="signup_form_select" id="register_select_institute" value="3">
-                                                Institute
-                                            </label>
+                                                <label class="register-label">
+                                                    <input type="radio" name="signup_form_select" id="register_select_institute" value="3">
+                                                    Institute
+                                                </label>
                                             
-                                            <div class="input--with-icon form-group">
-                                                <div class="column">
-                                                    <i class="fa fa-user"></i>
-                                                    <input type="text" class="form-control form-name" name="fname" placeholder=" Name.." id="change_placeholder" value="<?php echo $fname ?>">
+                                                <div class="input--with-icon form-group">
+                                                    <div class="column">
+                                                        <i class="fa fa-user"></i>
+                                                        <input type="text" class="form-control form-name" name="fname" placeholder=" Name..." id="change_placeholder" value="<?php echo $fname ?>">
+                                                    </div> 
+                                                    <span> <?php echo  $first_name_error ?>
                                                 </div>
-                                                <span> <?php echo  $first_name_error ?>
-                                            </div>
 
                         
-                                            <div class="input--with-icon form-group">
-                                                <div class="column">
-                                                   <i class="fa fa-envelope"></i>
-                                                   <input type="email" class="form-control form-emailid" name="email" placeholder="Email id.." >
-                                               </div>
-                                                <span class="error"> <?php echo $email_error ?></span>
-                                            </div>
-
-                                            <div class="input--with-icon form-group">
-                                                <div class="column">
-                                                    <i class="fa fa-lock"></i>
-                                                    <input type="password" class="form-control" name="pass1" placeholder="Password..">
+                                                <div class="input--with-icon form-group">
+                                                    <div class="column">
+                                                        <i class="fa fa-envelope"></i>
+                                                        <input type="email" class="form-control form-emailid" name="email" placeholder="Email id..." >
+                                                    </div>
+                                                    
+                                                    <span class="error"><?php echo $email_error ?></span>
                                                 </div>
-                                                <span class="error"> <?php echo $password_error ?></span>   
-                                            </div>
+
+                                                <div class="input--with-icon form-group">
+                                                    <div class="column">
+                                                        <i class="fa fa-lock"></i>
+                                                        <input type="password" class="form-control" name="pass1" placeholder="Password...">
+                                                    </div>
+                                                    <span class="error"><?php echo $password_error ?></span>   
+                                                </div>
                                             
-                                            <div class="input--with-icon form-group">
-                                                <div class="column">
-                                                 <i class="fa fa-lock"></i>
-                                                    <input type="password" class="form-control" name="cnfrm-pass" placeholder="confirm password..">
+                                                <div class="input--with-icon form-group">
+                                                    <div class="column">
+                                                        <i class="fa fa-lock"></i>
+                                                        <input type="password" class="form-control" name="cnfrm-pass" placeholder="confirm password...">
+                                                    </div>
+                                                    <span class="error"><?php echo $confrmpass_error ?></span>   
                                                 </div>
-                                                <span class="error"> <?php echo $confrmpass_error ?></span>   
-                                            </div>
-                                            <div class="input--with-icon form-group">
-                                                 <div class="column">
-                                                    <i class=" fa fa-phone"></i>
-                                                    <input type="tel" class="form-control form-phoneno" name="phone" placeholder="Phone number..">
-
+                                                <div class="input--with-icon form-group">
+                                                    <div class="column">
+                                                        <i class=" fa fa-phone"></i>
+                                                        <input type="tel" class="form-control form-phoneno" name="phone" placeholder="Phone number..">
+                                                    </div>
+                                                    <span class="error"><?php echo $phone_error ?></span>   
                                                 </div>
-                                                
-                                                <span class="error"> <?php echo $phone_error ?></span>   
-                                            </div>
-                                            <div class="register-submit form-group">
-                                                <input type="submit" name="" value="Submit">
-                                            </div>
-                                       </form>
+                                                <div class="register-submit form-group">
+                                                    <input type="submit" name="" value="Submit">
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -248,8 +251,6 @@ function test_input($data)
                     </div>
                 </div>
             </div>
-       </div>
- </div>
-    
-</section>
+        </div>
+    </section>
 <?php include "footer.php" ?>

@@ -43,6 +43,7 @@
 					</div>
 					<div class="user-location">
 						<div>
+							
 							<input type="text" name="location" placeholder="Address1" class="text-field">
 							<input type="text" name="location" placeholder="Locality" class="text-field" id="locality">
 

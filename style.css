@@ -278,12 +278,12 @@ section.search
 }
 
 /* On mouse-over, add a grey background color */
-.custom_radio_btn:hover input ~ .checkmark {
+.custom_radio_btn:hover input + .checkmark {
     background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.custom_radio_btn input:checked ~ .checkmark {
+.custom_radio_btn input:checked + .checkmark {
     background-color: #2196F3;
 }
 
@@ -295,7 +295,7 @@ section.search
 }
 
 /* Show the indicator (dot/circle) when checked */
-.custom_radio_btn input:checked ~ .checkmark:after {
+.custom_radio_btn input:checked + .checkmark:after {
     display: block;
 }
 
@@ -1051,6 +1051,30 @@ div.register-layout
 	color: red;
 	font-size: 16px;
 }
+.error-msz
+{
+	color: red;
+	font-size: 16px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	text-align: center;
+	width: 100%;
+	transform: translateX(-50%);
+}
+.success-msz
+{
+
+	color: #4ce24c;
+	font-size: 16px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translateX(-50%);
+}
+
 
 .home-tutor
 {
@@ -1726,39 +1750,36 @@ border-color: #2196F3;
 
 
 
-
-h1, p {
-	font-family: sans-serif;
-	text-align: center;
-	color: #323330;
-	font-size:  100px;
-}
-
-
-p {
-	font-size: 30px;
-}
-
-#output, #container {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-}
-#output
+.search_card
 {
-	margin: 0;
-	padding: 0;
+display: block;
+background: white;
+margin-bottom: 3px;
+height: 200px;
+}
+.search_card .search_img 
+{
+	display: inline-block;
+	width: 30%;
+	height: 100%;
+	border-right: 1px solid #ccc;
+}
+.search_card .caption
+{
+	display: inline-block;
+	width: 68%;
 }
 
-
-input {
-    background-color: #eee;
-    border: none;
-    font-family: sans-serif;
-    color: #000;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
+.caption p
+{
+	font-size: 15px;
 }
+.search_img a
+{
+	text-decoration: none;
+}
+.faculty_table
+{
+	border:2px solid #c7bdbd;
+}
+

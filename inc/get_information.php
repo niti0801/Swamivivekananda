@@ -332,7 +332,7 @@
                         <button class="next-modal5 " style="display: none;">Next</button>
                         <button class="next-modal6 " style="display: none;">Next</button>
                         <button class="next-modal7 " style="display: none;">Next</button>
-                        <button class="next-modal8 " style="display: none;">Next</button>
+                        <a  href="filter.php" class="next-modal8 " style="display: none;">Next</a>
 
                         
                     </div>

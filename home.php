@@ -1,10 +1,14 @@
 <?php include "header.php" ?>
-
+<div class="spacer"></div>
+   
 	<section class="search">
+
 		<div class="hero"></div>
+      
   		<div class="container">
             <div class="row">
   			    <div class="col-md-12 text-center">
+
 				    <h1 class="heading">Swami Vivekananda Jnana Kendra</h1>
 			    </div>	
 			</div>

@@ -121,10 +121,95 @@
   				</div>
   			</div>
  		</div>
- 		<div class="col-sm-12 col-md-8">
-
+ 		<div class="col-md-5 col-sm-4">
+ 		    <div class="search_card">
+ 		    	<div class="search_img">	
+ 		    		<img src="images/img_avatar2.png" alt="Lights" style="width:50%">
+ 		    	</div>
+ 		       	<!-- <a href="about_faculty.php" target="_blank"> -->
+ 		          
+ 		          	<div class="caption">
+ 		            	<p>Name:XYZ</p>
+ 		            	<p>Qualification:M.ed</p>
+ 		            	<p>Experience:10years</p>
+ 		          	</div>
+ 		       <!-- 	</a> -->
+ 		   	</div>
  		</div>
- 	</div>
+<div class="col-md-5 col-sm-4">
+ 		    <div class="search_card">
+ 		    	<div class="search_img">	
+ 		    		<img src="images/img_avatar2.png" alt="Lights" style="width:50%">
+ 		    	</div>
+ 		       	<!-- <a href="about_faculty.php" target="_blank"> -->
+ 		          
+ 		          	<div class="caption">
+ 		            	<p>Name:XYZ</p>
+ 		            	<p>Qualification:M.ed</p>
+ 		            	<p>Experience:10years</p>
+ 		          	</div>
+ 		       <!-- 	</a> -->
+ 		   	</div>
+ 		</div>
+<div class="col-md-5 col-sm-4">
+ 		    <div class="search_card">
+ 		    	<div class="search_img">	
+ 		    		<img src="images/img_avatar2.png" alt="Lights" style="width:50%">
+ 		    	</div>
+ 		       	<!-- <a href="about_faculty.php" target="_blank"> -->
+ 		          
+ 		          	<div class="caption">
+ 		            	<p>Name:XYZ</p>
+ 		            	<p>Qualification:M.ed</p>
+ 		            	<p>Experience:10years</p>
+ 		          	</div>
+ 		       <!-- 	</a> -->
+ 		   	</div>
+ 		</div>
+<div class="col-md-5 col-sm-4">
+ 		    <div class="search_card">
+ 		    	<div class="search_img">	
+ 		    		<img src="images/img_avatar2.png" alt="Lights" style="width:50%">
+ 		    	</div>
+ 		       	<!-- <a href="about_faculty.php" target="_blank"> -->
+ 		          
+ 		          	<div class="caption">
+ 		            	<p>Name:XYZ</p>
+ 		            	<p>Qualification:M.ed</p>
+ 		            	<p>Experience:10years</p>
+ 		          	</div>
+ 		       <!-- 	</a> -->
+ 		   	</div>
+ 		</div>
+<div class="col-md-5 col-sm-4">
+ 		    <div class="search_card">
+ 		    	<div class="search_img">	
+ 		    		<img src="images/img_avatar2.png" alt="Lights" style="width:50%">
+ 		    	</div>
+ 		       	<!-- <a href="about_faculty.php" target="_blank"> -->
+ 		          
+ 		          	<div class="caption">
+ 		            	<p>Name:XYZ</p>
+ 		            	<p>Qualification:M.ed</p>
+ 		            	<p>Experience:10years</p>
+ 		          	</div>
+ 		       <!-- 	</a> -->
+ 		   	</div>
+ 		</div>
+
+
+
+ 		
+ 		
+ 		
+ 	
+ 		
+ 		
+ 		
+ 		
+	
+	
+ 	
  </div>
 
  	

@@ -18,9 +18,17 @@
 	                    <div class="card no-border">
 	                        <div id="chat" class="conv-form-wrapper">
 	                            <form action="dashboard.php" method="POST" class="hidden" id="chatbot">
+	                            	
+	                            	<select data-conv-question="Who are you?">
+	                            		<option value="student/parent">Student/Parent</option>
+	                                    <option value="faculty">Faculty</option>
+	                                    <option value="institute">Institute</option>
+	                            	</select>
+	                            	<div data-conv-case="student/parent">
+	                            	
 	                                <select data-conv-question="Hello! We are providing excellent education service.Do you want to know our service?">
 	                                    <option value="yes">Yes</option>
-	                                    <option value="sure">Sure!</option>
+	                                    <option value="sure">No</option>
 	                                </select>
 	                                <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
 	                                <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you. (note that this question doesn't expect any answer)" data-no-answer="true">
@@ -82,7 +90,7 @@
 
 	                               			<input type="text" name="location"data-conv-question="Location where you require the service:" data-no-answer="true">
 	                                        <input type="text" data-conv-question="Howdy, {location}:0! " data-no-answer="true"> 
-
+	                                    </div>
 	                                        <select name="thought" data-conv-question="Do you want us to search teacher according to your preferences?">
 		                                    	<option value="yes" data-callback="submitform">Yes</option>
 		                                    	<!-- <a href="#">abc</a> -->
