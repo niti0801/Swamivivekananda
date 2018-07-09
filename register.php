@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $phone=test_input($phone);
              if(!preg_match('/^[0-9]{10}$/', $phone))
              {
-              $phone_error="only Digits are valid";  
+              $phone_error="only 10 Digits are valid";  
              }
         }
     }
@@ -133,7 +133,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
               {
                  
                
-                $success_message="Account created succesfully";
+                // $success_message="Account created succesfully";
+                header('Location:home.php');
                 $fname="";
                 $email="";
                 $phone="";
@@ -184,7 +185,7 @@ function test_input($data)
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="inner-body">
-                                            <form action=" "  method="POST" id="form-register"> 
+                                            <form action=""  method="POST" id="form-register"> 
                                                 <label class="register-label ">
                                                     <input type="radio" name="signup_form_select" value="1" id="register_select_student" checked> Student  
                                                 </label>

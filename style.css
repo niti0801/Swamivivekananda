@@ -157,7 +157,7 @@ section.search
 }
 .search label#sub
 {
-		display: none;
+		/*display: none;*/
 }
 
 .search .btn_get_info

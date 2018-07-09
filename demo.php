@@ -18,7 +18,7 @@
 
 <div class="profile-complete-main-content">
 	<div class="container">
-		<form action="dashboard.php" id="ms-form" method="post">
+		<form action="filter.php" id="ms-form" method="post">
 			<div class="ms-main-div">
 				<div class="profile-pic">
 					<div class="profile-pic-box text-center" >

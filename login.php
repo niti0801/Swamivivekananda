@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
              print_r( $row['password'] );
              if($row['password']==$password)
              {
-             	header('Location:home.php');
+             	header('Location:demo.php');
              }
              $error_message="Username/Password not correct"; 
          }
@@ -136,7 +136,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	        	<div class="col-md-7 col-md-offset-3">
 	            	<div class=" login-form-container">
 	                	<div class="login-form">
-	                		<div class="error-msz"><?php echo $login_error_msz ?></div>
+	                		<div class="error-msz"><?php echo $error_message ?></div>
 	                		
 	                   		<form action="" method="post">
 	                       		<h2>Login Form</h2>
