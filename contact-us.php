@@ -16,30 +16,7 @@
            </div>
 
   </section>
- <!--  <section>
-  	<div class="container">
-          <div class="row">
-               <div class="col-md-6">
-               	<form>
-               		<input type="text" name="hii" placeholder="Your full name">
-               	<!-- 	<div class="col-md-6"> -->
-               		<!-- <input type="tel" name="phone-no" placeholder="Your phone no">
-               		<div class="col-md-6">
-               		<input type="email" name="email" placeholder="Your email(example@example.com)"> -->
-               		<!-- <div class="col-md-6">
-               	   <textarea rows="7" name="message" placeholder="Please enter your message"></textarea> -->
-
-               <!-- 	</form>
-
-</div>
-</div>
-
-               </div>
-            </div>
-    </div>
-  </section>
-
- </section>  -->
+ 
   <section class="contact-us">
 	<div class="container">
 		<div class="row">
@@ -87,8 +64,8 @@
 
 <section>
 	<div class="row">
-		<div class="col-md-12 ">
-			<h3 style="margin-left: 90px">Contact Form</h3>
+		<div class="col-md-4 ">
+			<h3 style="margin-left:38px">Contact Form</h3>
 
 			<div class="container container-form">
 			  <form action="#">
@@ -99,7 +76,7 @@
 			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
 			    <label for="email">Email id</label>
-			    <input type="email" id="lname" name="lastname" placeholder="Your email id..">
+			    <input type="email" id="email" name="email" placeholder="Your email id..">
 			    <label for="subject">Subject</label>
 			    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 

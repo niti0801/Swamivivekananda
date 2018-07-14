@@ -53,7 +53,6 @@
 						<div class="btn-for-previous-next">
 							<a href="javascript:void(0)" class="previous" id="previous">Previous</a>
 							<a href="javascript:void(0)" id="next" class="next">Next</a>
-
 						</div>
 					</div>
 

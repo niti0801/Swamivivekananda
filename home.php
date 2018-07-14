@@ -34,7 +34,16 @@
 						</label>
 
 					    <label for="place">Location<br>
-							<input type="text" name="place" placeholder="Where" id="place">
+							<!-- <input type="text" name="place" placeholder="Where" id="places"> -->
+                     <select  name="location" class="places">
+                        <option value="place">Hennur Cross</option>
+                        <option value="place">Nagawara</option>
+                        <option value="place">Manyata Tech Park</option>
+                        <option value="place">Hebbal</option>
+                        <option value="place">Ramamurtynagar</option>
+                        <option value="place">JP Nagar</option>
+                  </select>
+                     
 						</label>
 						
                         <label for="subject" id="sub">Subject<br>

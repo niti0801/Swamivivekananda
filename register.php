@@ -22,7 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     if(empty($fname) && empty($pass) && empty($cnfrm_password) && empty($email) && empty($phone))
     {
+        
         $error="All fields are mandatory.";
+        
     }
     else
     {
@@ -203,11 +205,17 @@ function test_input($data)
                                                 <div class="input--with-icon form-group">
                                                     <div class="column">
                                                         <i class="fa fa-user"></i>
-                                                        <input type="text" class="form-control form-name" name="fname" placeholder=" Name..." id="change_placeholder" value="<?php echo $fname ?>">
+                                                        <input type="text" maxlength="25" class="form-control form-name" name="fname" placeholder=" Name..." id="change_placeholder" value="<?php echo $fname ?>">
                                                     </div> 
-                                                    <span> <?php echo  $first_name_error ?>
+                                                    <span class="error"><?php echo  $first_name_error ?></span>
                                                 </div>
-
+                                                <div class="input--with-icon form-group">
+                                                    <div class="column">
+                                                        <i class=" fa fa-phone"></i>
+                                                        <input type="tel" class="form-control form-phoneno" name="phone" placeholder="Phone number.." maxlength="10">
+                                                    </div>
+                                                    <span class="error"><?php echo $phone_error ?></span>   
+                                                </div>
                         
                                                 <div class="input--with-icon form-group">
                                                     <div class="column">
@@ -219,9 +227,10 @@ function test_input($data)
                                                 </div>
 
                                                 <div class="input--with-icon form-group">
-                                                    <div class="column">
+                                                    <div class="column ">
                                                         <i class="fa fa-lock"></i>
-                                                        <input type="password" class="form-control" name="pass1" placeholder="Password...">
+                                                        <input type="password" class="form-control form-password" name="pass1" placeholder="Password...">
+                                                        <span class="tooltip_text" >Enter a password longer than 8 characters include(a-zA-Z@_0-9)</span>
                                                     </div>
                                                     <span class="error"><?php echo $password_error ?></span>   
                                                 </div>
@@ -229,19 +238,13 @@ function test_input($data)
                                                 <div class="input--with-icon form-group">
                                                     <div class="column">
                                                         <i class="fa fa-lock"></i>
-                                                        <input type="password" class="form-control" name="cnfrm-pass" placeholder="confirm password...">
+                                                        <input type="password" class="form-control form-confrmpass" name="cnfrm-pass" placeholder="confirm password...">
                                                     </div>
                                                     <span class="error"><?php echo $confrmpass_error ?></span>   
                                                 </div>
-                                                <div class="input--with-icon form-group">
-                                                    <div class="column">
-                                                        <i class=" fa fa-phone"></i>
-                                                        <input type="tel" class="form-control form-phoneno" name="phone" placeholder="Phone number..">
-                                                    </div>
-                                                    <span class="error"><?php echo $phone_error ?></span>   
-                                                </div>
+                                                
                                                 <div class="register-submit form-group">
-                                                    <input type="submit" name="" value="Submit">
+                                                    <input type="submit" name="" value="Submit" id="register_form_submit">
                                                 </div>
                                             </form>
                                         </div>
