@@ -124,19 +124,19 @@ section.search
 {
 		display: inline-block;
 }
-/*.search input[name=place]
+.search input[name=place]
 
 {
-*/		/*display: inline-block;*/
+		/*display: inline-block;*/
 		/*width: 25%;*/
-		/*padding: 24px 10px;
+		padding: 24px 10px;
 		box-sizing: border-box;
 		border-radius: 8px;
 		border:1px solid #9b9494;
 		position: relative;
 
-}*/
-/*.search input[name=place]:before
+}
+.search input[name=place]:before
 {
 		position: absolute;
 		content: "\f041";
@@ -144,7 +144,7 @@ section.search
 		right: 0px;
 
 
-}*/
+}
 .search select.places
 {
 	padding: 15	px 10px;
@@ -1091,7 +1091,7 @@ input[type=tel]
 }
 .spacer
 {
-	height: 75px;
+	height: 73px;
 	width:100%;
 }
 

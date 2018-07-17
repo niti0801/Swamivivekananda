@@ -19,30 +19,31 @@
 	                        <div id="chat" class="conv-form-wrapper">
 	                            <form action="dashboard.php" method="POST" class="hidden" id="chatbot">
 	                            	
-	                            	<select data-conv-question="Who are you?">
-	                            		<option value="student/parent">Student/Parent</option>
+	                            	<select name="identify" data-conv-question="Who are you?" data-callback="storeState">
+	                            		<option value="student">Student/Parent</option>
 	                                    <option value="faculty">Faculty</option>
 	                                    <option value="institute">Institute</option>
 	                            	</select>
-	                            	<div data-conv-case="student/parent">
+	                            	<div data-conv-fork="identify">
+	                            		<div data-conv-case="student">
 	                            	
-	                                <select data-conv-question="Hello! We are providing excellent education service.Do you want to know our service?">
-	                                    <option value="yes">Yes</option>
-	                                    <option value="sure">No</option>
-	                                </select>
-	                                <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
-	                                <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you. (note that this question doesn't expect any answer)" data-no-answer="true">
-	                                <input type="text" data-conv-question="We have multiple courses" data-no-answer="true">
-	                                <select name="multi[]" data-conv-question="which course u want?" multiple>
-	                                    <option value="ClassI-ClassXII">ClassI-ClassXII</option>
-	                                    <option value="Technical Languages">Technical Languages</option>
-	                                    <option value="B.Tech">B.Tech</option>
-	                                    <option value="BBA">BBA</option>
-	                                </select>
-	                                <select name="programmer" data-callback="storeState" data-conv-question="So, are you a Student? (this question will fork the conversation based on your answer)">
-	                                    <option value="yes">Yes</option>
-	                                    <option value="no">No</option>
-	                                </select>
+	                                		<select data-conv-question="We are providing excellent education service.Do you want to know our service?">
+	                                   	 		<option value="yes">Yes</option>
+	                                    		<option value="sure">No</option>
+	                                		</select>
+	                                		<input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
+	                               			<input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you. (note that this question doesn't expect any answer)" data-no-answer="true">
+	                                		<input type="text" data-conv-question="We have multiple courses" data-no-answer="true">
+	                               			 <select name="multi[]" data-conv-question="which course u 		want?" multiple>
+	                                    		<option value="ClassI-ClassXII">ClassI-ClassXII</option>
+	                                   			<option value="Technical Languages">Technical Languages</option>
+	                                    		<option value="B.Tech">B.Tech</option>
+	                                   			<option value="BBA">BBA</option>
+	                                		</select>
+	                                		<select name="programmer" data-callback="storeState" data-conv-question="So, are you a Student? (this question will fork the conversation based on your answer)">
+	                                   			<option value="yes">Yes</option>
+	                                   			<option value="no">No</option>
+	                                		</select>
 	                                <div data-conv-fork="programmer">
 	                                    <div data-conv-case="yes">
 	                                        <input type="text" name="class"data-conv-question="In which class you are studing" data-no-answer="true">

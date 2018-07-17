@@ -227,31 +227,53 @@ $(document).ready(function($)
 		}
 	});
 		
+	function get_info(){
+		console.log('hello');
+	}
+		
 	$(".get_start_btn").click(function()
 	{
 		$(".get_info_intro").hide();
 		$(".get_start_btn").hide();
 		$(".get_info_student_1").show();
 		$(".next-modal").show();
+		$(".back-modal").show();
 	});
-		// $(".get_start_btn").click(function()
-		// {
-		// 	$(".get_info_intro").hide();
-		// 	$(".get_start_btn").hide();
-		// 	$(".get_info_tutor").show();
-		// 	$(".next-modal").show();
-		// });
+	$(".back-modal").click(function()
+	{
+		$(".get_info_student_1").hide();
+		$(".next-modal").hide();
+		$(".back-modal").hide();
+		$(".get_info_intro").show();
+		$(".get_start_btn").show();
 
 
+	});
 	$(".next-modal").click(function()
 	{
 		$(".get_info_intro").hide();
 		$(".get_start_btn").hide();
 		$(".get_info_student_1").hide();
 		$(".next-modal").hide();
+		$(".back-modal").hide();
 		$(".get_info_student_2").show();
 		$(".next-modal1").show();
+		$(".back-modal1").show();
 	});
+
+	$(".back-modal1").click(function()
+	{   
+		$(".get_info_intro").hide();
+		$(".get_start_btn").hide();
+		$(".get_info_student_2").hide();
+		$(".next-modal1").hide();
+		$(".back-modal1").hide();
+		$(".next-modal2").show();
+		$(".get_info_student_1").show();
+		$(".next-modal").show();
+		$(".back-modal").show();
+	});
+
 	$(".next-modal1").click(function()
 	{
 		$(".get_info_intro").hide();
@@ -260,8 +282,20 @@ $(document).ready(function($)
 		$(".next-modal").hide();
 		$(".get_info_student_2").hide();
 		$(".next-modal1").hide();
+		$(".back-modal1").hide();
 		$(".get_info_student_3").show();
 		$(".next-modal2").show();
+		$(".back-modal2").show();
+	});
+	$(".back-modal2").click(function()
+	{
+		$(".get_info_student_3").hide();
+		$(".next-modal2").hide();
+		$(".back-modal2").hide();
+		$(".get_info_student_2").show();
+		$(".next-modal1").show();
+		$(".back-modal1").show();
+
 	});
 	$(".next-modal2").click(function()
 	{
@@ -275,6 +309,16 @@ $(document).ready(function($)
 		$(".next-modal2").hide();
 		$(".get_info_student_4").show();
 		$(".next-modal3").show();
+		$(".back-modal3").show();
+	});
+	$(".back-modal3").click(function()
+	{
+		$(".get_info_student_4").hide();
+		$(".next-modal3").hide();
+		$(".back-modal2").hide();
+		$(".next-modal2").show();
+		$(".back-modal2").show();
+		$(".get_info_student_3").show();
 	});
 	$(".next-modal3").click(function()
 	{
@@ -372,33 +416,47 @@ $(document).ready(function($)
 		$(".get_info_student_9").show();
 		$(".next-modal8").show();
 	});
-	$('.form-name').keypress(function(e)
+	// $('.form-name').keypress(function(e)
 
-	{
-		var keyCode = e.which;
-		var name = $(this).val();
-        var filter = /[a-zA-Z]+/;
+	// {
+	// 	var keyCode = e.which;
+	// 	var name = $(this).val();
+ //        var filter = /[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{1,25}$/;
 
  
 
-		if ( !( (keyCode >= 65 && keyCode <= 90) ||(keyCode >= 97 && keyCode <= 122) || (keyCode == 8 || keyCode == 32))) 
-		{
-	  		 e.preventDefault();
-			    if ( filter.test(name)) 
-			    {
-			        $(this).removeClass("valid");
-			        $(this).addClass("invalid");
-			        return false;
-			    }
+	// 	if ( !( (keyCode >= 65 && keyCode <= 90) ||(keyCode >= 97 && keyCode <= 122) || (keyCode == 8 || keyCode == 32))) 
+	// 	{
+	//   		 // e.preventDefault();
+	// 		    // if ( filter.test(name)) 
+	// 		    if(name.length>25)
+	// 		    {
+	// 		        //$(this).removeClass("valid");
+	// 		        $(this).addClass("invalid");
+	// 		        return false;
+	// 		    }
 
-			    else
-			    {
-			    	$(this).removeClass("invalid");
-			     	$(this).addClass("valid");
-			    	return true;
-				}
-		}
-	});
+	// 		    else
+	// 		    {
+	// 		    	$(this).removeClass("invalid");
+	// 		     	$(this).addClass("valid");
+	// 		    	return true;
+	// 			}
+	// 	}
+	// });
+	$(".form-name").on("blur", function() 
+	{
+    if ( $(this).val().match('^[a-zA-Z]{3,16}$') ) 
+    {
+    	$(this).removeClass("invalid");
+       $(this).addClass("valid");
+    } 
+    else 
+    {
+    	$(this).removeClass("valid");
+         $(this).addClass("invalid");
+    }
+});
 	$('.form-phoneno').keypress(function(e) 
 	{ 
 		
@@ -413,11 +471,11 @@ $(document).ready(function($)
 				$(this).removeClass("invalid");
 				$(this).addClass("valid");
 			}
-			else
-			{
-				$(this).removeClass("valid");
-				$(this).addClass("invalid");
-			}
+			// else
+			// {
+			// 	$(this).removeClass("valid");
+			// 	$(this).addClass("invalid");
+			// }
 
 		}
 		else
@@ -449,7 +507,7 @@ $(document).ready(function($)
 	  {
 	  	// $(".tooltip_text").show();
 	  	var password=$(this).val();
-	  	var filter=/^[a-zA-Z@_0-9]{7,16}$/;
+	  	var filter=/((?=.*\d)(?=.*[A-Z])(?=.*\W).{8,8})/;
 	  	
 	  	if(filter.test(password))
 	  	{

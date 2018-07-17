@@ -8,7 +8,7 @@
                     </button>
                     
                  </div>
-                <div class="modal-body text-left get_info_content ">
+                <div class="modal-body text-left get_info_content">
                     <div class="get_info_intro">
                         <h3>We will ask a few questions to connect you with the right Tutors</h3>
                     </div>
@@ -323,16 +323,34 @@
 
                 <div class="modal-footer">
                     <div class="get_info_btn">
-                        <button class="get_start_btn">Get Started</button>
-                        <button class="next-modal " style="display: none;">Next</button>
-                        <button class="next-modal1 " style="display: none;">Next</button>
-                        <button class="next-modal2 " style="display: none;">Next</button>
-                        <button class="next-modal3 " style="display: none;">Next</button>
-                        <button class="next-modal4 " style="display: none;">Next</button>
-                        <button class="next-modal5 " style="display: none;">Next</button>
-                        <button class="next-modal6 " style="display: none;">Next</button>
-                        <button class="next-modal7 " style="display: none;">Next</button>
-                        <a  href="filter.php" class="next-modal8 " style="display: none;">Next</a>
+                        <button class="get_start_btn" onclick="get_info()">Get Started</button>
+
+                        <button class="back-modal  btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal  btn-primary" style="display: none;">Next</button>
+
+                        <button class="back-modal1 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal1 btn-primary" style="display: none;">Next</button>
+
+                        <button class="back-modal2 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal2 btn-primary" style="display: none;">Next</button>
+
+                        <button class="back-modal3 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal3 btn-primary" style="display: none;">Next</button>
+
+                        <button class="back-modal4 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal4 btn-primary" style="display: none;">Next</button>
+
+                        <button class="back-modal5 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal5 btn-primary" style="display: none;">Next</button>
+
+                        <button class="back-modal6 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal6 btn-primary " style="display: none;">Next</button>
+
+                        <button class="back-modal7 btn-primary" style="display: none;">Back</button>
+                        <button class="next-modal7 btn-primary " style="display: none;">Next</button>
+
+                        <button class="back-modal8 btn-primary" style="display: none;">Back</button>
+                        <a  href="filter.php" class="next-modal8 btn-primary" style="display: none;">Next</a>
 
                         
                     </div>
