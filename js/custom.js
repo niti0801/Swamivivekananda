@@ -231,191 +231,262 @@ $(document).ready(function($)
 		console.log('hello');
 	}
 		
+	// $(".get_start_btn").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").show();
+	// 	$(".next-modal").show();
+	// 	$(".back-modal").show();
+	// // });
+	 var state = 1;
 	$(".get_start_btn").click(function()
 	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").show();
-		$(".next-modal").show();
-		$(".back-modal").show();
+		if(state==1)
+		{
+
+       $('.get_info_intro').hide();
+       $('.get_info_student_1').show();
+
+       state=2;
+    } 
+    else if(state==2)
+    {
+       $('.get_info_student_1').hide();
+       $('.get_info_student_2').show();
+       state=3;
+    }
+    else if(state==3)
+    {
+       $('.get_info_student_2').hide();
+       $('.get_info_student_3').show();
+
+       state=4;
+    }
+    else if(state==4)
+    {
+       $('.get_info_student_3').hide();
+       $('.get_info_student_4').show();
+       state=5; //back to state
+    }
+    else if(state==5)
+    {
+       $('.get_info_student_4').hide();
+       $('.get_info_student_5').show();
+       state=6; //back to state
+    }
+    else if(state==6)
+    {
+       $('.get_info_student_5').hide();
+       $('.get_info_student_6').show();
+       state=7; //back to state
+    }
+    else if(state==7)
+    {
+       $('.get_info_student_6').hide();
+       $('.get_info_student_7').show();
+       state=8; //back to state
+    }
+    else if(state==8)
+    {
+       $('.get_info_student_7').hide();
+       $('.get_info_student_8').show();
+       state=9; //back to state
+    }
+    else if(state==9)
+    {
+       $('.get_info_student_8').hide();
+       $('.get_info_student_9').show();
+       state=1; //back to state
+    }
+    else if(state==1)
+    {
+      $('.get_info_student_9').hide();
+      $('.get_info_student_1').hide();
+       $('.get_info_intro').show();
+        //back to state
+    }
 	});
-	$(".back-modal").click(function()
-	{
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".back-modal").hide();
-		$(".get_info_intro").show();
-		$(".get_start_btn").show();
 
 
-	});
-	$(".next-modal").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".back-modal").hide();
-		$(".get_info_student_2").show();
-		$(".next-modal1").show();
-		$(".back-modal1").show();
-	});
 
-	$(".back-modal1").click(function()
-	{   
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".back-modal1").hide();
-		$(".next-modal2").show();
-		$(".get_info_student_1").show();
-		$(".next-modal").show();
-		$(".back-modal").show();
-	});
+	// $(".back-modal").click(function()
+	// {
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".back-modal").hide();
+	// 	$(".get_info_intro").show();
+	// 	$(".get_start_btn").show();
 
-	$(".next-modal1").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".back-modal1").hide();
-		$(".get_info_student_3").show();
-		$(".next-modal2").show();
-		$(".back-modal2").show();
-	});
-	$(".back-modal2").click(function()
-	{
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".back-modal2").hide();
-		$(".get_info_student_2").show();
-		$(".next-modal1").show();
-		$(".back-modal1").show();
 
-	});
-	$(".next-modal2").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".get_info_student_4").show();
-		$(".next-modal3").show();
-		$(".back-modal3").show();
-	});
-	$(".back-modal3").click(function()
-	{
-		$(".get_info_student_4").hide();
-		$(".next-modal3").hide();
-		$(".back-modal2").hide();
-		$(".next-modal2").show();
-		$(".back-modal2").show();
-		$(".get_info_student_3").show();
-	});
-	$(".next-modal3").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".get_info_student_4").hide();
-		$(".next-modal3").hide();
-		$(".get_info_student_5").show();
-		$(".next-modal4").show();
-	});
-	$(".next-modal4").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".get_info_student_4").hide();
-		$(".next-modal3").hide();
-		$(".get_info_student_5").hide();
-		$(".next-modal4").hide();
-		$(".get_info_student_6").show();
-		$(".next-modal5").show();
-	});
-	$(".next-modal5").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".get_info_student_4").hide();
-		$(".next-modal3").hide();
-		$(".get_info_student_5").hide();
-		$(".next-modal4").hide();
-		$(".get_info_student_6").hide();
-		$(".next-modal5").hide();
-		$(".get_info_student_7").show();
-		$(".next-modal6").show();
-	});
+	// });
+	// $(".next-modal").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".back-modal").hide();
+	// 	$(".get_info_student_2").show();
+	// 	$(".next-modal1").show();
+	// 	$(".back-modal1").show();
+	// });
 
-	$(".next-modal6").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".get_info_student_4").hide();
-		$(".next-modal3").hide();
-		$(".get_info_student_5").hide();
-		$(".next-modal4").hide();
-		$(".get_info_student_6").hide();
-		$(".next-modal5").hide();
-		$(".get_info_student_7").hide();
-		$(".next-modal6").hide();
-		$(".get_info_student_8").show();
-		$(".next-modal7").show();
-	});
-	$(".next-modal7").click(function()
-	{
-		$(".get_info_intro").hide();
-		$(".get_start_btn").hide();
-		$(".get_info_student_1").hide();
-		$(".next-modal").hide();
-		$(".get_info_student_2").hide();
-		$(".next-modal1").hide();
-		$(".get_info_student_3").hide();
-		$(".next-modal2").hide();
-		$(".get_info_student_4").hide();
-		$(".next-modal3").hide();
-		$(".get_info_student_5").hide();
-		$(".next-modal4").hide();
-		$(".get_info_student_6").hide();
-		$(".next-modal5").hide();
-		$(".get_info_student_7").hide();
-		$(".next-modal6").hide();
-		$(".get_info_student_8").hide();
-		$(".next-modal7").hide();
-		$(".get_info_student_9").show();
-		$(".next-modal8").show();
-	});
+	// $(".back-modal1").click(function()
+	// {   
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".back-modal1").hide();
+	// 	$(".next-modal2").show();
+	// 	$(".get_info_student_1").show();
+	// 	$(".next-modal").show();
+	// 	$(".back-modal").show();
+	// });
+
+	// $(".next-modal1").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".back-modal1").hide();
+	// 	$(".get_info_student_3").show();
+	// 	$(".next-modal2").show();
+	// 	$(".back-modal2").show();
+	// });
+	// $(".back-modal2").click(function()
+	// {
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".back-modal2").hide();
+	// 	$(".get_info_student_2").show();
+	// 	$(".next-modal1").show();
+	// 	$(".back-modal1").show();
+
+	// });
+	// $(".next-modal2").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".get_info_student_4").show();
+	// 	$(".next-modal3").show();
+	// 	$(".back-modal3").show();
+	// });
+	// $(".back-modal3").click(function()
+	// {
+	// 	$(".get_info_student_4").hide();
+	// 	$(".next-modal3").hide();
+	// 	$(".back-modal2").hide();
+	// 	$(".next-modal2").show();
+	// 	$(".back-modal2").show();
+	// 	$(".get_info_student_3").show();
+	// });
+	// $(".next-modal3").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".get_info_student_4").hide();
+	// 	$(".next-modal3").hide();
+	// 	$(".get_info_student_5").show();
+	// 	$(".next-modal4").show();
+	// });
+	// $(".next-modal4").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".get_info_student_4").hide();
+	// 	$(".next-modal3").hide();
+	// 	$(".get_info_student_5").hide();
+	// 	$(".next-modal4").hide();
+	// 	$(".get_info_student_6").show();
+	// 	$(".next-modal5").show();
+	// });
+	// $(".next-modal5").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".get_info_student_4").hide();
+	// 	$(".next-modal3").hide();
+	// 	$(".get_info_student_5").hide();
+	// 	$(".next-modal4").hide();
+	// 	$(".get_info_student_6").hide();
+	// 	$(".next-modal5").hide();
+	// 	$(".get_info_student_7").show();
+	// 	$(".next-modal6").show();
+	// });
+
+	// $(".next-modal6").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".get_info_student_4").hide();
+	// 	$(".next-modal3").hide();
+	// 	$(".get_info_student_5").hide();
+	// 	$(".next-modal4").hide();
+	// 	$(".get_info_student_6").hide();
+	// 	$(".next-modal5").hide();
+	// 	$(".get_info_student_7").hide();
+	// 	$(".next-modal6").hide();
+	// 	$(".get_info_student_8").show();
+	// 	$(".next-modal7").show();
+	// });
+	// $(".next-modal7").click(function()
+	// {
+	// 	$(".get_info_intro").hide();
+	// 	$(".get_start_btn").hide();
+	// 	$(".get_info_student_1").hide();
+	// 	$(".next-modal").hide();
+	// 	$(".get_info_student_2").hide();
+	// 	$(".next-modal1").hide();
+	// 	$(".get_info_student_3").hide();
+	// 	$(".next-modal2").hide();
+	// 	$(".get_info_student_4").hide();
+	// 	$(".next-modal3").hide();
+	// 	$(".get_info_student_5").hide();
+	// 	$(".next-modal4").hide();
+	// 	$(".get_info_student_6").hide();
+	// 	$(".next-modal5").hide();
+	// 	$(".get_info_student_7").hide();
+	// 	$(".next-modal6").hide();
+	// 	$(".get_info_student_8").hide();
+	// 	$(".next-modal7").hide();
+	// 	$(".get_info_student_9").show();
+	// 	$(".next-modal8").show();
+	// });
 	// $('.form-name').keypress(function(e)
 
 	// {

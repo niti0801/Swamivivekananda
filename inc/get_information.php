@@ -323,9 +323,9 @@
 
                 <div class="modal-footer">
                     <div class="get_info_btn">
-                        <button class="get_start_btn" onclick="get_info()">Get Started</button>
+                        <button class="get_start_btn">Get Started</button>
 
-                        <button class="back-modal  btn-primary" style="display: none;">Back</button>
+                       <!--  <button class="back-modal  btn-primary" style="display: none;">Back</button>
                         <button class="next-modal  btn-primary" style="display: none;">Next</button>
 
                         <button class="back-modal1 btn-primary" style="display: none;">Back</button>
@@ -350,7 +350,7 @@
                         <button class="next-modal7 btn-primary " style="display: none;">Next</button>
 
                         <button class="back-modal8 btn-primary" style="display: none;">Back</button>
-                        <a  href="filter.php" class="next-modal8 btn-primary" style="display: none;">Next</a>
+                        <a  href="filter.php" class="next-modal8 btn-primary" style="display: none;">Next</a> -->
 
                         
                     </div>
